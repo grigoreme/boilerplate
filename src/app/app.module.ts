@@ -1,7 +1,11 @@
 // Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 // Others
 import { Console } from '@fusionworks/advanced-logger';
@@ -31,6 +35,10 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MenubarModule,
+    ButtonModule,
+    InputTextModule,
   ],
   providers: [
     BasicService,
