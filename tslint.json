@@ -37,14 +37,6 @@
       }
     ],
     "no-consecutive-blank-lines": false,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
     "no-empty": false,
     "no-inferrable-types": [
       true,
@@ -71,7 +63,7 @@
         "multiline": {
           "objects": "always",
           "arrays": "always",
-          "functions": "never",
+          "functions": "ignore",
           "typeLiterals": "ignore"
         },
         "esSpecCompliant": true

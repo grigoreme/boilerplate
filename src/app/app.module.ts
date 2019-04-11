@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
+// Others
+import { Console } from '@fusionworks/advanced-logger';
+
 // Services
 import { BasicService } from './services/basic.service';
 
@@ -15,6 +18,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/notfound/notfound.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -34,4 +38,8 @@ import { NotFoundComponent } from './components/notfound/notfound.component';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console = new Console(environment.consoleSettings);
+  }
+}

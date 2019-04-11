@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private basicService: BasicService) { }
+  constructor(private basicService: BasicService) {
+    console.info(this.message);
+  }
 
   get message() {
     return this.basicService.message;
