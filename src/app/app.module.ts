@@ -1,11 +1,14 @@
-// Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
+
+// External Modules
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+
+// Local Modules
+import { AppRoutingModule } from './app-routing.module';
 
 // Others
 import { Console } from '@fusionworks/advanced-logger';
@@ -15,6 +18,10 @@ import { BasicService } from './services/basic.service';
 
 // Guards
 import { BasicGuardCanActivate } from './guards/basic.guard';
+
+// Interceptors
+import { CacheInterceptor } from './interceptors/cache.interceptor';
+import { AuthInterceptor } from './interceptors/authorization.interceptor';
 
 // Components
 import { AppComponent } from './components/layout/app.component';
@@ -43,6 +50,8 @@ import { environment } from '../environments/environment';
   providers: [
     BasicService,
     BasicGuardCanActivate,
+    CacheInterceptor,
+    AuthInterceptor,
   ],
   bootstrap: [AppComponent],
 })
